@@ -1,0 +1,238 @@
+html {
+    background: #B3E5FC;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: #333333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    /* this is so the nav bar does not hide h1 */
+    padding: 60px 10px 10px 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p {
+    padding: 20px;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+b {
+    font-weight: bold;
+}
+
+
+.recipes {
+    padding: 25px;
+}
+
+.recipes h1, .recipes h2, .recipes h3 {
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+@media (prefers-reduced-motion) {
+    .grid-container > .gif {
+        display: none;
+    }
+}
+
+.nav-grid-container {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0288D1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* tablet view has nav bar at bottom */
+@media screen and (min-width: 800px) {
+    h1 {
+        padding: 10px;
+    }
+    .nav-grid-container {
+        top: auto;
+        bottom: 0px;
+    }
+    main {
+        padding-bottom: 50px;
+    }
+}
+
+.nav-grid-container > li {
+    float: left;
+    font-size: 24px;
+    list-style-type: none;
+}
+
+.nav-grid-container a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .nav-grid-container a:hover:not(.active), .nav-grid-container a:focus:not(.active) {
+        background-color: #4FC3F7;
+        transition: background-color 0.3s ease;
+    }
+}
+
+.nav-grid-container .active {
+    color: white;
+    text-decoration: underline;
+    background-color: rgb(105, 140, 255);
+}
+
+.skip-to-main {
+    position: absolute;
+    overflow: hidden;
+    top: auto;
+    left: -10000px;
+}
+
+.skip-to-main:focus {
+    left: 12px;
+    top: 55px;
+    color: black;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.likes-list {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 0 40px 40px 40px;
+}
+
+.grid-container div {
+    display: inline;
+}
+
+.grid-container > h2, .grid-container > .photo-gallery, .grid-container > h3 {
+    text-align: center;
+}
+
+.grid-container > .img-desc {
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-container img, .grid-container video, .img-desc > p {
+    width: 100%;
+}
+
+.grid-container > p, .grid-container > h2 {
+    padding: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+    .grid-container > h2, .grid-container > .photo-gallery, .grid-container > h3 {
+        grid-column: 1 / span 2;
+
+    }
+    .grid-container img, .grid-container video, .img-desc > p {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 20px;
+}
+
+.item-grid > img {
+    justify-self: center;
+    align-self: center;
+}
+
+.bullet-points-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.bullet-points-ordered {
+    padding-left: 30%;
+}
+
+.bullet-points-unordered {
+    padding-left: 5vw;
+}
+
+@media only screen and (min-width: 800px) {
+    .item-grid {
+        grid-template-columns: auto auto;
+    }
+    .item-grid > img {
+        grid-column: 2;
+    }
+    .item-grid > p {
+        padding-left: 100px;
+    }
+    .bullet-points-title {
+        text-align: center;
+    }
+    
+    .bullet-points {
+        padding-left: 10vw;
+    }
+}
+
+.instagram-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-h3 {
+    padding-bottom: 25px;
+    text-align: center;
+}
