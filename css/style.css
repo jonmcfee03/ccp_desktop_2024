@@ -86,6 +86,16 @@ b {
         padding-bottom: 50px;
     }
 }
+/* desktop view has nav bar at top */
+@media screen and (min-width: 1080px) {
+    h1 {
+        padding: 60px;
+    }
+    .nav-grid-container {
+        top: 0px;
+        bottom: auto;
+    }
+}
 
 .nav-grid-container > li {
     float: left;
@@ -227,7 +237,13 @@ b {
 }
 
 @media only screen and (min-width: 1080px) {
-
+    .item-grid > div {
+        margin-right: 0;
+    }
+    .item-grid > img {
+        margin-left: 400px;
+        margin-right: 0;
+    }
     .recipes > div {
         display: grid;
         grid-template-columns: auto auto;
@@ -240,7 +256,7 @@ b {
         align-items: center;
         justify-content: space-around;
     }
-    .grid-container {
+    .recipe .grid-container {
         grid-template-columns: auto;
         grid-area: 3 / 2 / span 3 / span 1;
     }
@@ -259,10 +275,43 @@ b {
         margin: 0;
         padding: 20px;
     }
+    .pets-div {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10%;
+    }
+    .pets-div > h2, .pets-div > .grid-container {
+        grid-column: 1 / span 2;
+    }
+    .pets-div > img {
+        grid-area: 2 / 2 / span 3 / span 1;
+    }
+    .pets-div > p {
+        width: 80%;
+        text-align: left;
+        margin: auto;
+    }
+    .pets-div li {
+        list-style-type: none;
+    }
+
+    .location {
+        margin: auto;
+    }
+}
+
+#show-ig {
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+    background-color: #FFFFFF;
+    border: none;
 }
 
 .instagram-embed {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
