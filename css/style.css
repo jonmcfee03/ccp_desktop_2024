@@ -226,6 +226,41 @@ b {
     }
 }
 
+@media only screen and (min-width: 1080px) {
+
+    .recipes > div {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .recipes h2 {
+        grid-column: 1 / span 2;
+    }
+    .item-grid {
+        grid-column: 1 / span 2;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .grid-container {
+        grid-template-columns: auto;
+        grid-area: 3 / 2 / span 3 / span 1;
+    }
+    .grid-container > h3 {
+        display: none;
+    }
+    .grid-container img {
+        max-width: 600px;
+    }
+    .recipe-p, .recipe-ingredients, .recipe-steps {
+        width: 70%;
+        justify-self: center;
+    }
+    .recipe-p, .recipe-ingredients, .recipe-steps, .bullet-points-title, .bullet-points-ordered, .bullet-points-unordered {
+        text-align: left;
+        margin: 0;
+        padding: 20px;
+    }
+}
+
 .instagram-embed {
     display: flex;
     justify-content: center;
